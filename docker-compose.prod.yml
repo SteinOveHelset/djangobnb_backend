@@ -7,11 +7,14 @@ services:
       - 1337:80
     depends_on:
       - web
+    volumes:
+      - media_volume:/usr/src/djangobnb_backend/media
   web:
     build: ./djangobnb_backend
     command: gunicorn djangobnb_backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./djangobnb_backend/:/usr/src/djangobnb_backend/
+      - media_volume:/usr/src/djangobnb_backend/media
     expose:
       - 8000
     env_file:
