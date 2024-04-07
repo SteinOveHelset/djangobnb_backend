@@ -9,3 +9,4 @@ pillow==10.2.0
 channels==4.0.0
 daphne==4.0.0
 gunicorn==21.2.0
+python-dotenv==1.0.1
