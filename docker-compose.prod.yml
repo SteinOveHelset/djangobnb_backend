@@ -4,7 +4,7 @@ services:
   nginx:
     build: ./nginx
     ports:
-      -1337:80
+      - 1337:80
     depends_on:
       - web
   web:
